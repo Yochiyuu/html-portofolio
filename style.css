@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+nav .logo {
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-switcher, .menu-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+#hero {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 120vh;
+    padding: 0 20px;
+    background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2ZnZzduM3VxaTZuMWpyaW9kaTllYXJuYjhka2NpNTJlc2FjYXFwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12UO10ttdgtI16NWMM/giphy.gif') no-repeat center center/cover;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 600;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #007bff;
+}
+
+.btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+section {
+    padding: 100px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 10px auto;
+    border-radius: 2px;
+    background-color: #007bff;
+}
+
+.tentang-content {
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#proyek {
+    background-color: #f8f9fa;
+}
+
+.proyek-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.proyek-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.proyek-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.proyek-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.proyek-item h3 {
+    margin: 20px 0 10px;
+}
+
+.proyek-item p {
+    padding: 0 20px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.proyek-item .btn-secondary {
+    margin-bottom: 25px;
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.skills-category h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 120px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item i {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.skill-item p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+#kontak {
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+#kontak p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+#kontak form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#kontak input,
+#kontak textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#kontak input:focus,
+#kontak textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+footer {
+    background-color: #343a40;
+    color: #aeb6bf;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.social-links {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #aeb6bf;
+    font-size: 1.5rem;
+    margin: 0 12px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode nav .logo,
+body.dark-mode nav ul li a,
+body.dark-mode .theme-switcher,
+body.dark-mode .menu-toggle {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #007bff;
+}
+
+body.dark-mode #hero::before {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode h2 {
+    color: #ffffff;
+}
+
+body.dark-mode #proyek,
+body.dark-mode #kontak {
+    background-color: #1c1c1c;
+}
+
+body.dark-mode .proyek-item,
+body.dark-mode .skill-item {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .proyek-item:hover,
+body.dark-mode .skill-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode #kontak input,
+body.dark-mode #kontak textarea {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+body.dark-mode #kontak input::placeholder,
+body.dark-mode #kontak textarea::placeholder {
+    color: #888;
+}
+
+body.dark-mode #kontak input:focus,
+body.dark-mode #kontak textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a;
+}
+
+@media (min-width: 768px) {
+    #hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .proyek-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .proyek-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: block;
+        z-index: 102;
+    }
+
+    body.dark-mode .menu-toggle {
+        color: #e0e0e0;
+    }
+
+    nav ul#nav-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(5px);
+        transition: left 0.4s ease-in-out;
+        z-index: 101;
+    }
+
+    body.dark-mode nav ul#nav-menu {
+        background-color: rgba(26, 26, 26, 0.95);
+    }
+
+    nav ul#nav-menu.active {
+        left: 0;
+    }
+
+    nav ul#nav-menu li {
+        margin: 1.5rem 0;
+    }
+
+    nav ul#nav-menu li a {
+        font-size: 1.5rem;
+    }
+}
